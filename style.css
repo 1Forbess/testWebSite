@@ -6,17 +6,17 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #121212; /* Темный фон */
+    background: #f0f0f0; /* Светлый фон */
     font-family: Arial, sans-serif;
-    color: #e0e0e0; /* Светло-серый текст */
+    color: #333; /* Темно-серый текст */
 }
 
 .container {
     text-align: center;
     padding: 30px;
-    background: #1e1e1e; /* Темный фон */
+    background: #ffffff; /* Белый фон */
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     width: 100%;
     overflow-y: auto; /* Позволяет прокручивать содержимое, если оно не помещается */
@@ -33,7 +33,7 @@ h1 {
 }
 
 h2 {
-    color: #e0e0e0; /* Светло-серый цвет для заголовков второго уровня */
+    color: #333; /* Темно-серый цвет для заголовков второго уровня */
 }
 
 /* Параграфы и ссылки */
@@ -72,8 +72,8 @@ a:hover {
 }
 
 .options label {
-    background-color: #333; /* Темный фон для вариантов */
-    color: #e0e0e0; /* Светло-серый текст */
+    background-color: #e0e0e0; /* Светло-серый фон для вариантов */
+    color: #333; /* Темно-серый текст */
     padding: 10px 15px;
     margin: 5px 0;
     border-radius: 5px;
@@ -84,7 +84,7 @@ a:hover {
 }
 
 .options label:hover {
-    background-color: #444; /* Цвет при наведении */
+    background-color: #d3d3d3; /* Цвет при наведении */
 }
 
 input[type="radio"] {
@@ -104,23 +104,23 @@ footer {
 
 /* Визуальные настройки для формы */
 form {
-    background-color: #1e1e1e; /* Темный фон для формы */
+    background-color: #ffffff; /* Белый фон для формы */
     padding: 20px;
     margin: 20px auto;
     max-width: 500px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 label, p {
-    color: #e0e0e0; /* Светло-серый текст */
+    color: #333; /* Темно-серый текст */
     font-size: 18px;
 }
 
 select, input[type="radio"], input[type="checkbox"] {
-    background-color: #333; /* Темный фон для элементов ввода */
-    color: #e0e0e0; /* Светло-серый текст */
-    border: 1px solid #555; /* Темно-серый бордер */
+    background-color: #f0f0f0; /* Светлый фон для элементов ввода */
+    color: #333; /* Темно-серый текст */
+    border: 1px solid #ccc; /* Светло-серый бордер */
     padding: 5px;
     margin: 10px 0;
     border-radius: 5px;
@@ -143,11 +143,10 @@ input[type="button"]:hover, select:hover {
 #result {
     font-size: 20px;
     font-weight: bold;
-    color: #e0e0e0; /* Светло-серый текст */
+    color: #333; /* Темно-серый текст */
 }
 
 ul {
     list-style-type: disc;
     margin-left: 20px;
-    color: #e0e0e0; /* Светло-серый текст для списков */
 }
