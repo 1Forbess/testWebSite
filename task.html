@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест по клавиатурам</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .task {
+            display: none;
+            margin-top: 20px;
+        }
+        .task.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Тест по клавиатурам</h1>
+        <h2>Выберите задание</h2>
+
+        <!-- Вкладки с заданиями -->
+        <button onclick="showTask(1)">Задание 1</button>
+        <button onclick="showTask(2)">Задание 2</button>
+        <button onclick="showTask(3)">Задание 3</button>
+        <button onclick="showTask(4)">Задание 4</button>
+        <button onclick="showTask(5)">Задание 5</button>
+        <button onclick="showTask(6)">Задание 6</button>
+        <button onclick="showTask(7)">Задание 7</button>
+        <button onclick="showTask(8)">Задание 8</button>
+        <button onclick="showTask(9)">Задание 9</button>
+        <button onclick="showTask(10)">Задание 10</button>
+
+        <!-- Задания -->
+        <div id="task1" class="task">
+            <h2>Задание 1</h2>
+            <p>Какой тип клавиатуры использует механические переключатели для каждой клавиши?</p>
+        </div>
+        <div id="task2" class="task">
+            <h2>Задание 2</h2>
+            <p>Какой тип клавиатуры обычно тише и дешевле в производстве?</p>
+        </div>
+        <div id="task3" class="task">
+            <h2>Задание 3</h2>
+            <p>Какая клавиша позволяет переключаться между заглавными и строчными буквами?</p>
+        </div>
+        <div id="task4" class="task">
+            <h2>Задание 4</h2>
+            <p>Какие клавиши используются для управления курсором на экране?</p>
+        </div>
+        <div id="task5" class="task">
+            <h2>Задание 5</h2>
+            <p>Какая клавиатура сочетает в себе оптические и механические переключатели?</p>
+        </div>
+        <div id="task6" class="task">
+            <h2>Задание 6</h2>
+            <p>Какой тип клавиатуры лучше всего подходит для путешествий?</p>
+        </div>
+        <div id="task7" class="task">
+            <h2>Задание 7</h2>
+            <p>Какие клавиши обычно используются для выполнения специальных команд в программах?</p>
+        </div>
+        <div id="task8" class="task">
+            <h2>Задание 8</h2>
+            <p>Какая клавиатура будет более удобной для геймеров, чтобы быстро реагировать?</p>
+        </div>
+        <div id="task9" class="task">
+            <h2>Задание 9</h2>
+            <p>Какая клавиатура лучше всего подойдёт для писателя, который много печатает ежедневно?</p>
+        </div>
+        <div id="task10" class="task">
+            <h2>Задание 10</h2>
+            <p>Какой тип клавиатуры считается более надежным и долговечным?</p>
+        </div>
+    </div>
+
+    <script>
+        function showTask(taskNumber) {
+            const tasks = document.querySelectorAll('.task');
+            tasks.forEach(task => {
+                task.classList.remove('active');
+            });
+            document.getElementById('task' + taskNumber).classList.add('active');
+        }
+    </script>
+</body>
+</html>

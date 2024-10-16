@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комплектующие клавиатуры</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function updateModels() {
+            const switchType = document.getElementById('switchType').value;
+            const modelSelect = document.getElementById('models');
+            
+            modelSelect.innerHTML = '';
+            
+            let models = [];
+            if (switchType === 'Механические') {
+                models = ['Logitech G Pro', 'Razer BlackWidow', 'Corsair K95'];
+            } else if (switchType === 'Мембранные') {
+                models = ['Microsoft Ergonomic Keyboard', 'Logitech K120', 'HP 100'];
+            } else if (switchType === 'Оптические') {
+                models = ['Razer Huntsman', 'SteelSeries Apex Pro', 'Asus ROG Strix Scope RX'];
+            }
+
+            models.forEach(model => {
+                const option = document.createElement('option');
+                option.text = model;
+                modelSelect.add(option);
+            });
+        }
+
+        function displaySelection() {
+            const switchType = document.getElementById('switchType').value;
+            const model = document.getElementById('models').value;
+            const lighting = document.querySelector('select[name="lighting"]').value;
+            const connection = document.querySelector('select[name="connection"]').value;
+
+            if (switchType && model && lighting && connection) {
+                alert(`Вы выбрали:\nТип переключателей: ${switchType}\nМодель: ${model}\nПодсветка: ${lighting}\nТип подключения: ${connection}`);
+            } else {
+                alert("Пожалуйста, выберите все параметры.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Популярные комплектующие клавиатуры</h1>
+        <form>
+            <label>Тип переключателей:</label>
+            <select id="switchType" onchange="updateModels()">
+                <option value="">--Выберите тип--</option>
+                <option value="Механические">Механические</option>
+                <option value="Мембранные">Мембранные</option>
+                <option value="Оптические">Оптические</option>
+            </select><br><br>
+
+            <label>Модель клавиатуры:</label>
+            <select id="models">
+                <option value="">--Выберите модель--</option>
+            </select><br><br>
+
+            <label>Подсветка клавиш:</label>
+            <select name="lighting">
+                <option value="RGB">RGB</option>
+                <option value="Одноцветная">Одноцветная

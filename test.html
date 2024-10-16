@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверочный тест</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Проверочный тест</h1>
+        <form id="testForm">
+            <p>1. Что такое клавиатура?</p>
+            <input type="radio" name="q1" value="Устройство вывода"> Устройство вывода<br>
+            <input type="radio" name="q1" value="Устройство ввода"> Устройство ввода<br>
+            <input type="radio" name="q1" value="Системный блок"> Системный блок<br><br>
+
+            <p>2. Какие клавиши есть на клавиатуре?</p>
+            <input type="checkbox" name="q2" value="Буквенные"> Буквенные<br>
+            <input type="checkbox" name="q2" value="Числовые"> Числовые<br>
+            <input type="checkbox" name="q2" value="Мышь"> Мышь<br><br>
+
+            <input type="button" value="Проверить" onclick="checkAnswers()">
+        </form>
+
+        <p id="result"></p>
+
+        <a href="index.html">Вернуться на главную</a>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            if (q1 && q1.value === "Устройство ввода") {
+                score++;
+            }
+
+            const q2 = document.querySelectorAll('input[name="q2"]:checked');
+            if (q2.length === 2 && Array.from(q2).every(item => item.value !== "Мышь")) {
+                score++;
+            }
+
+            document.getElementById("result").textContent = "Ваш результат: " + score + "/2";
+        }
+    </script>
+</body>
+</html>
